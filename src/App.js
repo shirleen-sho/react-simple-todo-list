@@ -43,17 +43,17 @@ function App() {
   }
 
   return (
-    <div className='flex flex-col justify-center items-center gap-10 py-10 bg-slate-100'>
+    <div className='flex flex-col justify-center items-center gap-10 p-10 bg-slate-100'>
       <span className='font-bold text-3xl'>To Do List</span>
 
       { /* add todo */ }
-      <form onSubmit={handleSubmitInput} className="flex flex-col items-center w-1/3 gap-5">
+      <form onSubmit={handleSubmitInput} className="flex flex-col items-center w-full sm:w-2/3 lg:w-1/3 gap-5">
         <input className='w-full px-3 py-2 rounded-lg border border-blue-600' value={todoInput} type="text" onChange={handleChangeInput} placeholder="Insert things you want to do today"/>
         <button className='w-60 bg-green-500 hover:bg-green-600 text-white px-3 py-2 rounded-lg'>Insert</button>
       </form>
 
       { /* list todo */ }
-      <div className='flex flex-col items-center w-1/3 gap-5'>
+      <div className='flex flex-col items-center w-full sm:w-2/3 lg:w-1/3 gap-5'>
         <div className='w-full'>
         {todoList.map(todo => {
           return (
